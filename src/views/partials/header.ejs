@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Gastos</title>
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!---->
+    <div class="container">
+        <!--SideBar-->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img class="logo" src="img/icon.png" alt="">
+                <h2 class="app-name">ATCH</h2>
+            </div>
+            <hr>
+            <ul>
+                <li><a class="sidebar-link" href="/">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inventario</span>
+                </a></li>
+                <li><a class="sidebar-link" href="entradas">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <span>Entradas</span>
+                </a></li>
+                <li><a class="sidebar-link" href="salidas">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Salidas</span>
+                </a></li>
+                <hr>
+                <li><a class="sidebar-link" href="unidades-medida">
+                    <i class="fa-solid fa-money-check-alt"></i>
+                    <span>Unidades de Medida</span>
+                </a></li>
+                <li><a class="sidebar-link" href="articulos">
+                    <i class="fa-solid fa-th-list"></i>
+                    <span>Articulos</span>
+                </a></li>
+                
+            </ul>
+        </div>
+        <!--Content-->
+        <div class="content">
+            <!--Header-->
+            <header>
+                <div class="search-box">
+                    <input id="busqueda" type="text" placeholder="Buscar..." />
+                    <button id="btn-busqueda"><i class="fa-solid fa-search"></i></button>
+                </div>
+                 
+                <div class="combo-fecha">
+                    <select id="año">
+                        <% for (let i = new Date().getFullYear(); i >= 2020; i--) { %>
+                            <option value="<%= i %>"><%= i %></option>
+                        <% } %>
+                    </select>
+                    
+                    <select id="mes">
+                        <% const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']; %>
+                        <% for (let i = 0; i < meses.length; i++) { %>
+                            <option value="<%= i+1 %>"><%= meses[i] %></option>
+                        <% } %>
+                    </select>
+                </div>  
+            </header>
+            <!--main-->
+            <main>

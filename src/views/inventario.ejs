@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+<div class="main-header">
+    <span class="titulo">Inventario</span>
+    <%- include("partials/btn-nuevo") %>
+</div>
+<!--table-->
+<div class="table-container">
+    
+    <table id="table" >
+        <thead>
+            <tr>
+                <th>CODIGO</th>
+                <th>ARTICULO</th>
+                <th>UNI/MEDIDA</th>
+                <th>ENTRADA</th>
+                <th>SALIDA</th>
+                <th>TOTAL</th>
+                <th>PRECIO UNIT</th>
+                <th>PRECIO TOTAL</th>
+                <th></th>
+            </tr>
+        </thead>
+            <tbody></tbody>
+    </table>
+</div>
+<script>document.querySelectorAll(".sidebar-link")[0].classList.add("selected");</script>
+<script src="js/inventario.js"></script>
+<script src="js/data-table.js"></script>
+<%- include('partials/footer') %>

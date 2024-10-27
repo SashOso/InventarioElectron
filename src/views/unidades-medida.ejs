@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+<div class="main-header">
+    <span class="titulo">Unidades de Medida</span>
+    <%- include("partials/btn-nuevo") %>
+</div>
+<!--table-->
+<div class="table-container">
+    <table id="table" >
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+<script>document.querySelectorAll(".sidebar-link")[3].classList.add("selected");</script>
+<script src="js/unidades-medida.js"></script>
+<script src="js/data-table.js"></script>
+<%- include('partials/footer') %>

@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<div class="main-header">
+    <span class="titulo">Ingresos</span>
+    <%- include("partials/btn-nuevo") %>
+</div>
+<!--table-->
+<div class="table-container">
+    <table id="table" >
+        <thead>
+            <tr>
+                <th>CODIGO</th>
+                <th>DESCRIPCIÓN</th>
+                <th>Unid/Med</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+<script>document.querySelectorAll(".sidebar-link")[4].classList.add("selected");</script>
+<script src="js/articulos.js"></script>
+<script src="js/data-table.js"></script>
+<%- include('partials/footer') %>

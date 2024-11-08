@@ -2,7 +2,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const express = require('express');
 const path = require('path');
-
+//------
 // Configurar la aplicación de Express
 const expressApp = express();
 const PORT = 3000;
